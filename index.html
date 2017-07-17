@@ -1,0 +1,314 @@
+<html>
+<head>
+	<title>Tagalog Time for Techy Tweens </title>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="iain.ico">
+<!--
+
+				IDEAS
+	- fuse.js (flexible search engine, queries can be spelled incorrectly)
+
+
+
+-->
+</head>
+
+<body>
+
+<ul class="nav nav-tabs">
+		<a class="navbar-brand" href="iain.png" target="_blank" style="height:100px;">
+        	<img alt="Brand" src="iain.png" style="width:70px; height:70px;">
+     	</a>
+		<li role="presentation"><a href="index.html"><h2>Home</h2></a></li>
+		<li role="presentation"><a href="quizzy.html"><h2>Quiz</h2></a></li>
+		<li role="presentation"><a href="help.html"><h2>Help</h2></a></li>
+		<li role="presentation"><a href="addwords.html"><h2>Add Words</h2></a></li>
+
+</ul>
+<div id="display"><div id="wordList">
+	<div id="bodyp">
+		<h2>Body Parts</h2>
+
+	</div>
+	<div id="food">
+		<h2>Food</h2>
+
+	</div>
+	<div id="animal">
+		<h2>Animals</h2>
+
+	</div>
+	<div id="people">
+		<h2>People</h2>
+
+	</div>
+	<div id="tn">
+		<h2>Time and Numbers</h2>
+			<div id="num">
+				<h4>1-100</h4>
+
+			</div>
+			<div id="week">
+				<h4>Days of the Week</h4>
+
+			</div>
+				<h4>Units of Time</h4>
+	</div>
+	<div id="adj">
+		<h2>Adjectives</h2>
+
+	</div>
+	<div id="adverb">
+		<h2>Adverbs</h2>
+
+	</div>
+	<div id="noun">
+		<h2>Nouns</h2>
+
+	</div>
+	<div id="verb">
+		<h2>Verbs</h2>
+
+	</div>
+	<div id="phrase">
+		<h2>Phrases</h2>
+
+	</div>
+	<div id="misc">
+		<h2>Others</h2>
+	</div>
+	<div id="ex">
+		<h2>Example Sentences</h2>
+	</div>
+</div></div>
+
+<body>
+<style type="text/css">
+body{
+	margin:3%;
+}
+table{
+	width:100%;
+}
+
+td{
+	width:15%;
+	height:100px;
+	border: solid;
+	margin:1%;
+	display: inline-block;
+	text-decoration: none;
+}
+li{
+	list-style-type:none;
+	padding-left:2%;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+h2{
+	color:black;
+}
+</style>
+<script type="text/javascript">
+
+var Word=function(tag,engl,category){
+	this.engl=engl;
+	this.tag=tag;
+	this.category=category;
+
+	vocabList.push(this);
+
+	this.add=function(){
+		var addw=document.createElement("li");
+		addw.id="word"+(vocabList.indexOf(this)+1);
+		addw.innerHTML=this.tag+" = <i>"+this.engl+"</i>";
+		document.getElementById(this.category).appendChild(addw);
+	}
+}
+
+var vocabList=[];
+
+var w1=new Word("alaklakan","back of the knee","bodyp");
+var w2=new Word("tenga","ear","bodyp");
+var w3=new Word("leeg","neck","bodyp");
+var w4=new Word("kilikili","armpit","bodyp");
+var w5=new Word("bibig","mouth","bodyp");
+var w6=new Word("tinapay","bread","food");
+var w6=new Word("mainit",'"sexy" hot',"adj");
+var w7=new Word("Kain na.","Eat now.","ex");
+var w8=new Word("mansana","apple","food");
+var w8=new Word("puwet","butt","bodyp");
+var w9=new Word("mga","multiple","adj");
+var w10=new Word("meron","there is","verb");
+var w11=new Word("Ano ang __?","What is __?","ex");
+var w12=new Word("Pano sasabihin ang __ sa Tagalog?","How do you say __ in Tagalog?","ex");
+var w13=new Word("ay","is","verb");
+var w14=new Word("na __","was","verb");
+var w15=new Word("kabute","mushroom","food");
+var w16=new Word("kailangan","to need","verb");
+var w17=new Word("bulalakaw","shooting star","noun");
+var w18=new Word("maglinis","to clean","verb");
+var w19=new Word("langgam","ant","animal");
+var w20=new Word("kulang","missing/not enough","adverb");
+var w21=new Word("maligayang kaarawan","happy birthday","phrase");
+var w22=new Word("letrato/larawan","picture","noun");
+var w23=new Word("maghugas","washing dishes/hands","verb");
+var w24=new Word("maglaba","washing clothes","verb");
+var w25=new Word("paki","please","phrase");
+var w26=new Word("baka","beef","food");
+var w27=new Word("inihaw","grilled","adj");
+var w28=new Word("pagod","tired","adj");
+var w29=new Word("mabait","kind","adj");
+var w30=new Word("masipag","hard-working","adj");
+var w31=new Word("matalino","smart","adj");
+var w32=new Word("pandak","short","adj");
+var w33=new Word("masaya","happy","adj");
+var w34=new Word("malungkot","sad","adj");
+var w35=new Word("masungit","mean","adj");
+var w36=new Word("baliw","crazy","adj");
+var w37=new Word("bili","to buy","verb");
+var w38=new Word("hinahanap","to look for","verb");
+var w39=new Word("bagahe","baggage","noun");
+var w40=new Word("balikbayan","to return to origin","verb");
+var w41=new Word("sapagkat","because","misc");
+var w42=new Word("buan","moon","noun");
+var w43=new Word("buan","month","tn");
+var w44=new Word("payong","umbrella","noun");
+var w45=new Word("bex","gay (slang)","adj");
+var w46=new Word("pamaypay","hand fan","noun");
+var w47=new Word("alam ko","I know","phrase");
+var w48=new Word("Ano pa ang alam mo?","What else do you know?","ex");
+var w49=new Word("konti lang","just a little","phrase");
+var w50=new Word("Konti lang nakakaintindi ako pero hindi ako marunong magsalit nang derecho.","I understand a little, but I can not speak straight.","ex");
+var w51=new Word("Marunong kang mag Tagalog?","Do you know how to speak Tagalog?","ex");
+var w52=new Word("buntis","pregnant","adj");
+var w53=new Word("pagdiriwang","celebration","noun");
+var w54=new Word("paruparu","butterfly","animal");
+var w55=new Word("kitikiti","tadpole","animal");
+var w56=new Word("yosi","cigarette (slang)","noun");
+var w57=new Word("libre","free","adj");
+var w58=new Word("sugal","gamble","noun");
+var w59=new Word("sundot kulangot","remove bamboo wrapping of sweet rice ball as if picking nose","food");
+var w60=new Word("panganib","danger","noun");
+var w61=new Word("gubat","forest","noun");
+var w62=new Word("bituin","star","noun");
+var w63=new Word("linggo","week","tn");
+var w64=new Word("tagiliran","beef short ribs","food");
+var w65=new Word("tapadera","beef sirloin","food");
+var w66=new Word("adidas","chicken feet","food");
+var w67=new Word("balun balunan","chicken gizzard","food");
+var w68=new Word("kahon","box","noun");
+var w69=new Word("<b>CONJUGATE TO REFLEXIVE</b>namimili","shopping","verb");
+var w70=new Word("<b>CONJUGATE TO REFLEXIVE</b>bumibili","buying","verb");
+var w71=new Word("negosyo","business","noun");
+var w72=new Word("spongha","sponge","noun");
+var w73=new Word("luma","old","adj");
+var w74=new Word("mantika","oil","food");
+var w75=new Word("talong","eggplant","food");
+var w76=new Word("pekas","freckles","bodyp");
+var w77=new Word("kapatid","sibling","people");
+var w78=new Word("salita","word","noun");
+var w79=new Word("tanong","question","noun");
+var w80=new Word("talumpati","speech","noun");
+var w81=new Word("pasko","Christmas","noun");
+var w82=new Word("maiinip","bored","adj");
+var w83=new Word("paniki","bat","animal");
+var w84=new Word("daga","mouse","animal");
+var w85=new Word("kinukulong","cooped-up","adj");
+var w86=new Word("sapat","enough","adverb");
+var w87=new Word("abusado/a","taking advantage of/abuse","verb");
+var w88=new Word("ang nakaraan","previously","adverb");
+var w89=new Word("topi","to fold","verb");
+var w90=new Word("karera","race","noun");
+var w91=new Word("yaya","nanny","people");
+var w92=new Word("ramdam","feeling","noun");
+var w93=new Word("patalastas","advertisement","noun");
+var w94=new Word("balita","news","noun");
+var w95=new Word("sukulan","jail","noun");
+var w96=new Word("tagkain","predator","noun");
+var w97=new Word("pakwan","watermelon","food");
+var w98=new Word("alak","wine","food");
+var w99=new Word("tugtugin","music","noun");
+var w100=new Word("dahon","leaf","noun");
+var w101=new Word("baril","gun","noun");
+var w102=new Word("buko","coconut","food");
+var w103=new Word("utak","brain","bodyp");
+var w104=new Word("ulap","cloud","noun");
+var w105=new Word("mani","nuts","food");
+var w106=new Word("dubid","rope","noun");
+var w107=new Word("apoy","fire","noun");
+var w108=new Word("pari","priest","people");
+var w109=new Word("talo","to lose","verb");
+var w110=new Word("nalo","to win","verb");
+var w111=new Word("paputok","fireworks","noun");
+var w112=new Word("bandila","flag","noun");
+var w113=new Word("sugat","wound","noun");
+var w114=new Word("gatas","milk","food");
+var w115=new Word("tubig","water","food");
+var w116=new Word("itlog","egg","food");
+var w117=new Word("Tulog na.","Sleep now.","ex");
+var w118=new Word("isda","fish","food");
+var w119=new Word("paa","foot","bodyp");
+var w120=new Word("tuhod","knee","bodyp");
+var w121=new Word("mata","eye","bodyp");
+var w122=new Word("tungtung","stool","noun");
+var w123=new Word("sando","tank top","noun");
+var w124=new Word("buhok","hair","bodyp");
+var w125=new Word("kaibigan","friend","people");
+var w126=new Word("nanay","mother","people");
+var w127=new Word("tatay","father","people");
+var w128=new Word("mahal","love","noun");
+var w129=new Word("kamay","hand","bodyp");
+var w130=new Word("<!--001-->isa","one","num");
+var w131=new Word("<!--002-->dalawa","two","num");
+var w132=new Word("<!--003-->tatlo","three","num");
+var w133=new Word("<!--004-->apat","four","num");
+var w134=new Word("<!--005-->lima","five","num");
+var w135=new Word("<!--006-->anim","six","num");
+var w136=new Word("<!--007-->pito","seven","num");
+var w137=new Word("<!--008-->walo","eight","num");
+var w138=new Word("<!--009-->siyam","nine","num");
+var w139=new Word("<!--010-->sampu","ten","num");
+var w140=new Word("<!--011-->labing isa-labing siyam","eleven-nineteen","num");
+var w141=new Word("<!--020-->dalawangpu","twenty","num");
+var w142=new Word("<!--030-->tatlumpu","thirty","num");
+var w143=new Word("<!--040-->apatnapu","forty","num");
+var w144=new Word("<!--050-->limampu","fifty","num");
+var w145=new Word("<!--060-->animnapu","sixty","num");
+var w146=new Word("<!--070-->pitumpu","seventy","num");
+var w147=new Word("<!--080-->walumpu","eighty","num");
+var w148=new Word("<!--090-->siyamnapu","ninety","num");
+var w149=new Word("<!--100-->isang daan","one hundred","num");
+var w150=new Word("araw","day","tn");
+var w151=new Word("linggo","sunday","week");
+var w152=new Word("lunes","monday","week");
+var w153=new Word("martes","tuesday","week");
+var w154=new Word("miyerkules","wednesday","week");
+var w155=new Word("huwebes","thursday","week");
+var w156=new Word("biyernes","friday","week");
+var w157=new Word("sabado","saturday","week");
+var w158=new Word("bulaklak","flower","noun");
+var w159=new Word("ilong","nose","bodyp");
+
+
+
+
+//sorts array of classes alphabetically
+vocabList.sort(function(a, b) {
+   return a.tag.localeCompare(b.tag);
+});
+
+for(var i=0;i<vocabList.length;i++){
+	vocabList[i].add();
+}
+
+
+
+</script>
+
+
+</html>
